@@ -1,13 +1,40 @@
-# SEVPO
+<h1 align="center">
+  SEVPO: Divide and Conquer:<br>
+  Selective Value Learning and Policy Optimization<br>
+  for Offline Safe Reinforcement Learning
+</h1>
 
-**Divide and Conquer: Selective Value Learning and Policy Optimization for Offline Safe Reinforcement Learning**
+<p align="center">
+  <a href="https://openreview.net/forum?id=4KYrv6qYMl">
+    <img alt="OpenReview" src="https://img.shields.io/badge/OpenReview-TMLR-1f77b4">
+  </a>
+  <a href="https://youtu.be/tDpWq2EV_Ig">
+    <img alt="Demo" src="https://img.shields.io/badge/Demo-YouTube-red">
+  </a>
+  <a href="https://github.com/google/jax">
+    <img alt="Built on JAX" src="https://img.shields.io/badge/Built%20on-JAX-orange">
+  </a>
+  <a href="https://github.com/liuzuxin/DSRL">
+    <img alt="Benchmark" src="https://img.shields.io/badge/Benchmark-DSRL-purple">
+  </a>
+</p>
 
-[![Paper](https://img.shields.io/badge/OpenReview-TMLR-blue)](https://openreview.net/forum?id=4KYrv6qYMl)
-[![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB)](https://www.python.org/)
-[![JAX](https://img.shields.io/badge/JAX-Accelerated-orange)](https://github.com/google/jax)
+<p align="center">
+  Official implementation of
+  <a href="https://openreview.net/forum?id=4KYrv6qYMl">
+    <em>Divide and Conquer: Selective Value Learning and Policy Optimization for Offline Safe Reinforcement Learning</em>
+  </a>.
+</p>
 
-This repository contains the official implementation of **SEVPO**,
-a divide-and-conquer framework for **offline safe reinforcement learning**.
+<p align="center">
+  <a href="https://youtu.be/tDpWq2EV_Ig"><strong>Watch the robot demo</strong></a>
+  &nbsp;|&nbsp;
+  <a href="https://openreview.net/forum?id=4KYrv6qYMl"><strong>Read the paper</strong></a>
+</p>
+
+---
+
+This repository contains the official implementation of **SEVPO**, a divide-and-conquer framework for **offline safe reinforcement learning**.
 SEVPO separates value learning and policy optimization according to state safety:
 it performs reward-driven optimization in safe regions while switching to
 cost-minimization in unsafe regions to recover feasible behavior from fixed offline data.
@@ -17,6 +44,12 @@ The paper is currently available on OpenReview as a TMLR submission:
 
 <p align="center">
   <img src="assets/performance_toy.png" width="95%" alt="SEVPO performance on the toy navigation task">
+</p>
+
+## Main Results
+
+<p align="center">
+  <img src="assets/table1.png" width="95%" alt="Table 1: Normalized DSRL benchmark results with data variation">
 </p>
 
 ## Highlights
@@ -32,6 +65,7 @@ The paper is currently available on OpenReview as a TMLR submission:
 SEVPO/
 ├── assets/
 │   ├── performance_toy.png
+│   ├── table1.png
 │   └── sevpo-demo.mp4
 ├── code/
 │   ├── configs/          # SEVPO experiment configuration
@@ -99,6 +133,7 @@ Important fields include:
 ## Assets
 
 - [`assets/performance_toy.png`](assets/performance_toy.png): performance visualization from the paper.
+- [`assets/table1.png`](assets/table1.png): Table 1 from the paper.
 - [`assets/sevpo-demo.mp4`](assets/sevpo-demo.mp4): demo video.
 
 ## Citation
