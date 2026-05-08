@@ -1,0 +1,12 @@
+absl-py
+dsrl
+flax
+gymnasium
+h5py
+jax
+matplotlib
+ml-collections
+numpy
+optax
+tqdm
+wandb
