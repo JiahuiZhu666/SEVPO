@@ -50,6 +50,32 @@ The paper is currently available on OpenReview as a TMLR submission:
   <img src="assets/table1.png" width="95%" alt="Table 1: Normalized DSRL benchmark results with data variation">
 </p>
 
+Table 3 reports worst-case safety metrics across six Safety-Gymnasium tasks.
+SEVPO reduces both maximum episode cost and failure rate on every reported task.
+
+<p align="center">
+  <img src="assets/table3.png" width="85%" alt="Table 3: Worst-case safety metrics across six tasks">
+</p>
+
+## Quadruped Robot Navigation
+
+We further evaluate SEVPO on a safety-critical quadruped navigation setting in
+Isaac Gym with a Unitree Go2 robot. The robot must cross obstacle-filled terrain
+under easy and hard task configurations using only pre-collected offline data.
+The offline dataset combines expert demonstrations with lower-quality trajectories
+that fail at obstacle crossings, making the setting sensitive to unsafe behavior
+cloned from suboptimal data.
+
+<p align="center">
+  <img src="assets/robot_navigation.png" width="85%" alt="Quadruped robot navigation task overview">
+</p>
+
+In the mixed-data setting, SEVPO preserves robust navigation behavior while the
+baseline is more affected by low-quality demonstrations.
+
+The robot demonstration is available on YouTube:
+[youtu.be/tDpWq2EV_Ig](https://youtu.be/tDpWq2EV_Ig).
+
 ## Highlights
 
 - **Selective value learning** for separating safety-preserving and unsafe states.
@@ -63,7 +89,9 @@ The paper is currently available on OpenReview as a TMLR submission:
 SEVPO/
 ├── assets/
 │   ├── performance_toy.png
+│   ├── robot_navigation.png
 │   ├── table1.png
+│   ├── table3.png
 │   └── sevpo-demo.mp4
 ├── code/
 │   ├── configs/          # SEVPO experiment configuration
@@ -128,7 +156,26 @@ Important fields include:
 - `sampling_method`: diffusion policy sampler.
 - `dataset_kwargs`: dataset path and cost scaling.
 
+## Assets
 
+- [`assets/performance_toy.png`](assets/performance_toy.png): performance visualization from the paper.
+- [`assets/robot_navigation.png`](assets/robot_navigation.png): quadruped navigation task overview.
+- [`assets/table1.png`](assets/table1.png): Table 1 from the paper.
+- [`assets/table3.png`](assets/table3.png): Table 3 from the paper.
+- [`assets/sevpo-demo.mp4`](assets/sevpo-demo.mp4): demo video.
+
+## Citation
+
+If you find this code useful, please cite the paper. The citation entry will be
+updated after the TMLR review process is finalized.
+
+```bibtex
+@misc{sevpo2026,
+  title        = {Divide and Conquer: Selective Value Learning and Policy Optimization for Offline Safe Reinforcement Learning},
+  year         = {2026},
+  howpublished = {OpenReview},
+  url          = {https://openreview.net/forum?id=4KYrv6qYMl}
+}
 ```
 
 ## Acknowledgements
