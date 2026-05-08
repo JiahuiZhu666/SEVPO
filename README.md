@@ -130,24 +130,7 @@ Important fields include:
 - `sampling_method`: diffusion policy sampler.
 - `dataset_kwargs`: dataset path and cost scaling.
 
-## Assets
 
-- [`assets/performance_toy.png`](assets/performance_toy.png): performance visualization from the paper.
-- [`assets/table1.png`](assets/table1.png): Table 1 from the paper.
-- [`assets/sevpo-demo.mp4`](assets/sevpo-demo.mp4): demo video.
-
-## Citation
-
-If you find this code useful, please cite the paper. The citation entry will be
-updated after the TMLR review process is finalized.
-
-```bibtex
-@misc{sevpo2026,
-  title        = {Divide and Conquer: Selective Value Learning and Policy Optimization for Offline Safe Reinforcement Learning},
-  year         = {2026},
-  howpublished = {OpenReview},
-  url          = {https://openreview.net/forum?id=4KYrv6qYMl}
-}
 ```
 
 ## Acknowledgements
