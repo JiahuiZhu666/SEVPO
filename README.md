@@ -1,7 +1,5 @@
 <h1 align="center">
-  SEVPO: Divide and Conquer:<br>
-  Selective Value Learning and Policy Optimization<br>
-  for Offline Safe Reinforcement Learning
+  SEVPO
 </h1>
 
 <p align="center">
